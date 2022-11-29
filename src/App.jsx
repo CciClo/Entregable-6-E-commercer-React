@@ -31,8 +31,8 @@ function App() {
       <footer>
         <h4>Developers</h4>
         <h6>Oscar Tandioy & Jesus Escalona</h6>
-        <a href="">
-          <i  class="bi bi-github"></i>
+        <a href="https://github.com/CciClo/Entregable-6-E-commercer-React">
+          <i  className="bi bi-github"></i>
         </a>
       </footer>
     </HashRouter>

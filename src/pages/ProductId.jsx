@@ -57,7 +57,7 @@ const ProductId = () => {
                <div className='flex' >
                   <div className='container-information-product' >
                      <span>Price</span>
-                     <h4>{productFound.price}</h4>
+                     <h4>{productFound?.price}</h4>
                   </div>
 
                   <div className='container-information-product' >
