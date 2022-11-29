@@ -29,8 +29,8 @@ function App() {
         </Route>
       </Routes>
       <footer>
-        <h4>Developer</h4>
-        <h6>Oscar Tandioy</h6>
+        <h4>Developers</h4>
+        <h6>Oscar Tandioy & Jesus Escalona</h6>
         <a href="">
           <i  class="bi bi-github"></i>
         </a>
