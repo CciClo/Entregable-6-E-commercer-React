@@ -67,6 +67,7 @@ aside{
 aside ul {
    list-style: none;
    padding: 2rem;
+   z-index: var(--z-index-side)
 }
 
 .container-drop-down{
@@ -109,9 +110,12 @@ aside ul {
 
 .container-products{
    list-style: none;
+   min-height: 100vh;
 }
 
 .productCard {
+   min-height: 300px;
+   max-height: 500px;
    position: relative;
    border-radius: 10px;
    border: 1px solid var(--border-color-principal);
@@ -165,9 +169,10 @@ aside ul {
 
 .container-product-found{
    padding-top: 6rem;
+   min-height: 100vh;
 }
 
-.container-product-id{
+.container-product-detail{
    display: grid;
    grid-template-columns: repeat(2,1fr);
    padding: 40px;
@@ -175,7 +180,7 @@ aside ul {
 }
 
 
-.container-image-product-id {
+.container-image-product-detail {
    display: flex;
    flex-direction: column;
    gap: 50px;
@@ -193,12 +198,12 @@ aside ul {
    object-fit: contain;
 }
 
-.container-image-product-id div {
+.container-image-product-detail div {
    display: flex;
    align-items: center;
 }
 
-.container-image-product-id .bi {
+.container-image-product-detail .bi {
    width: 40px;
    height: 40px;
    display: flex;
@@ -250,6 +255,17 @@ aside ul {
    height: 30px;
    padding: 0;
    cursor: pointer;
+}
+
+.image-detail-show{
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   transition: all 1s;
+}
+
+.image-detail-hidden{
+   opacity: 0;
 }
 
 .flex{

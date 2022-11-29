@@ -30,17 +30,22 @@ const ProductId = () => {
 
    }, []);
 
-
    return (
       <div className='container-product-found' >
          <h2>{productFound?.title}</h2>
-         <div className='container-product-id' >
+         <div className='container-product-detail' >
 
-            <section className='container-image-product-id' >
+            <section className='container-image-product-detail' >
                <div className='container-image-id' >
-                  <i className="bi bi-chevron-left" onClick={() => (indexImage > 0 && setIndexImage(indexImage - 1))} ></i>
-                  <img src={productFound?.productImgs[indexImage]} alt="" />
-                  <i className="bi bi-chevron-right" onClick={() => (indexImage < productFound?.productImgs.length - 1 && setIndexImage(indexImage + 1))} ></i>
+                  <i className="bi bi-chevron-left" onClick={() => (indexImage > 0 ? setIndexImage(indexImage - 1) : setIndexImage(productFound?.productImgs.length - 1) )} ></i>
+                     <div style={{ display: "flex", overflow: "hidden", width:'80%', height:'100%', position:'relative', justifyContent:'center', alignItems:'center'  }} >
+                        {
+                           productFound?.productImgs.map((urlimage, index) => (
+                              <img className={`image-detail-show ${ indexImage !== index && 'image-detail-hidden' } `} src={urlimage} alt="" key={urlimage} />
+                           ))
+                        }
+                     </div>
+                  <i className="bi bi-chevron-right" onClick={() => (indexImage < productFound?.productImgs.length - 1 ? setIndexImage(indexImage + 1) : setIndexImage(0) )} ></i>
                </div>
                <div className='container-image-selector' >
                   {
