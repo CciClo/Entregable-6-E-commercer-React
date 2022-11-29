@@ -112,6 +112,7 @@ aside ul {
 }
 
 .productCard {
+   position: relative;
    border-radius: 10px;
    border: 1px solid var(--border-color-principal);
 }
@@ -142,6 +143,21 @@ aside ul {
 
 .container-information-product span {
    color: rgba(0, 0, 0, 0.527);
+}
+
+.bi-cart2{
+   width: 40px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 20px;
+   color: white;
+   background-color: rgb(255, 42, 0);
+   border-radius: 50%;
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
 }
 
 
