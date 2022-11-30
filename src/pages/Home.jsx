@@ -22,8 +22,8 @@ const Home = () => {
    }, []);
 
    const dropDown = (clas) => {
-      const classN = document.querySelector(`.${clas}`)
-      classN.classList.toggle('closed')
+      const classN = document.querySelector(`.${clas}`);
+      classN.classList.toggle('closed');
    };
 
 

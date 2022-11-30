@@ -8,7 +8,7 @@ export const isLoadingSlice = createSlice({
          return action.payload;
       }
     }
-})
+});
 
 export const { setIsLoading } = isLoadingSlice.actions;
 

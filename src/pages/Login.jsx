@@ -36,10 +36,10 @@ const Login = () => {
          } )
          .catch( error => {
             if( error.response?.status == 404){
-               alert('Algo salio mal')
-            }
-         })
-   }
+               alert('Algo salio mal');
+            };
+         });
+   };
 
 
    return (

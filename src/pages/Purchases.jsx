@@ -5,14 +5,14 @@ import { getPurchasesThunk } from '../store/slices/purchases.slice';
 const Purchases = () => {
    const dispatch = useDispatch();
 
-   const purchases = useSelector(state => state.purchases)
+   const purchases = useSelector(state => state.purchases);
 
    useEffect(() => {
       if(purchases.length == 0){
-         dispatch(getPurchasesThunk())
-         console.log(purchases)
-      }
-   }, [])
+         dispatch(getPurchasesThunk());
+         console.log(purchases);
+      };
+   }, []);
 
    return (
       <div className='container-product-found' >

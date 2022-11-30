@@ -8,10 +8,10 @@ export const cartSideBarSlice = createSlice({
     initialState: [],
     reducers: {
       setCartsSide: (state, action) => {
-         return action.payload
+         return action.payload;
       }
     }
-})
+});
 
 
 export const getCartSide = () => (dispatch) => {

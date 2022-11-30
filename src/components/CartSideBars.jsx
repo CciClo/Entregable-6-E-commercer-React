@@ -7,14 +7,14 @@ const CartSideBars = ({ show, handleClose }) => {
 
   const dispatch = useDispatch();
 
-  const cartSide = useSelector(state => state.cart)
+  const cartSide = useSelector(state => state.cart);
 
   useEffect(() => {
 
     if(cartSide.length === 0){
-      dispatch(getCartSide())
+      dispatch(getCartSide());
     }
-  },[])
+  },[]);
 
   return (
     <Offcanvas show={show} onHide={handleClose} placement='end' >
