@@ -5,6 +5,7 @@ import { setIsLoading } from '../store/slices/isLoading.slice';
 import { getProductsThunk } from '../store/slices/products.slice';
 import ProductCard from '../components/ProductCard'
 import { Button } from 'react-bootstrap';
+import { addToCartThunk } from '../store/slices/cartSideBar.slice';
 
 const ProductId = () => {
 
@@ -29,6 +30,17 @@ const ProductId = () => {
       }
 
    }, []);
+
+
+   const submit = () => {
+      const AddToCart = {
+         id: productFound.id,
+         quantity:quantity
+      }
+
+      dispatch(addToCartThunk(AddToCart))
+      
+   };
 
    return (
       <div className='container-product-found' >
@@ -74,7 +86,7 @@ const ProductId = () => {
                      </div>
                   </div>
                </div>
-               <Button style={{width:'100%'}} >
+               <Button style={{width:'100%'}} type='submit' onClick={submit} >
                   Add to cart
                </Button>
             </section>

@@ -21,6 +21,13 @@ export const getCartSide = () => (dispatch) => {
         .finally(() => dispatch(setIsLoading(false)));
 }
 
+export const addToCartThunk = (add) => (dispatch) => {
+    dispatch(setIsLoading(true));
+    return axios.post('https://e-commerce-api.academlo.tech/api/v1/cart',add,getConfig())
+        .then(() => dispatch(getCartSide()))
+        .finally(() => dispatch(setIsLoading(false)));
+};
+
 
 export const { setCartsSide } = cartSideBarSlice.actions;
 
