@@ -26,7 +26,10 @@ const Home = () => {
       classN.classList.toggle('closed');
    };
 
-
+   
+   const capitalize = (str) => {
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    }
    return (
       <div className='home' >
 
@@ -75,14 +78,14 @@ const Home = () => {
 
             <InputGroup className="mb-3">
                <Form.Control
-                  placeholder="Recipient's username"
-                  aria-label="Recipient's username"
+                  placeholder="Search your product"
+                  aria-label="Search your product"
                   aria-describedby="basic-addon2"
                   value={inputSearch}
                   onChange={e => setInputSearch(e.target.value)}
                />
-               <Button variant="outline-secondary" id="button-addon2" onClick={() => dispatch(filterProductThunk(inputSearch))} >
-                  find
+               <Button variant="outline-secondary" id="button-addon2" onClick={() => dispatch(filterProductThunk(capitalize(inputSearch)))} >
+                 Search
                </Button>
             </InputGroup>
 

@@ -7,7 +7,6 @@ const ProductCard = ({ product }) => {
 
    return (
       <li className='productCard' >
-         <Link to={`/product/${product.id}`}>
             <div className='container-image-product' >
                <img
                   
@@ -28,8 +27,10 @@ const ProductCard = ({ product }) => {
                <span>Price</span>
                <h4>{product.price}</h4>
             </div>
-         </Link>
+         
+         <Link to={`/product/${product.id}`}>
          <i className="bi bi-cart2"></i>
+         </Link>
       </li>
    );
 };

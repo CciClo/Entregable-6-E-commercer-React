@@ -143,6 +143,13 @@ aside ul {
    position: relative;
    border-radius: 10px;
    border: 1px solid var(--border-color-principal);
+   transition: all 0.5s;
+}
+.productCard:hover{
+ transform: scale(0.99);
+ border: 1px solid #00838d;
+ /* box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5); */
+ background-color: #f2f8f9;
 }
 
 @media (max-width: 500px) {
@@ -192,8 +199,19 @@ aside ul {
    position: absolute;
    right: 20px;
    bottom: 20px;
+   transition: all 0.3s;
 }
+.bi-cart2:hover{
+   transform: scale(1.09);
 
+}
+.bi-cart2:active {
+   background: rgb(214, 39, 5);
+   -webkit-box-shadow: inset 0px 0px 5px rgb(152, 32, 9);
+      -moz-box-shadow: inset 0px 0px 5px rgb(152, 32, 9);
+           box-shadow: inset 0px 0px 5px rgb(152, 32, 9);
+    outline: none;
+ }
 
 /* ************** product Detail ****************** */
 
