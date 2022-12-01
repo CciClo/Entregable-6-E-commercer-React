@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
-import { Offcanvas } from 'react-bootstrap';
+import { Button, Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCartSide } from '../store/slices/cartSideBar.slice';
+import { useNavigate } from 'react-router-dom';
+import { checkoutThunk, getCartSide } from '../store/slices/cartSideBar.slice';
 
 const CartSideBars = ({ show, handleClose }) => {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const cartSide = useSelector(state => state.cart);
 
@@ -25,9 +27,12 @@ const CartSideBars = ({ show, handleClose }) => {
         <ul>
           {
             cartSide.map(product => (
-              <li key={product.id} >{product.title}</li>
+              <li key={product.id} >
+                <h4>{product.title}</h4>
+              </li>
             ))
           }
+          <Button onClick={() => ( cartSide.length !== 0 && dispatch(checkoutThunk()), cartSide.length !== 0 && navigate('/purchases') ) } >Checkout</Button>
         </ul>
       </Offcanvas.Body>
     </Offcanvas>
