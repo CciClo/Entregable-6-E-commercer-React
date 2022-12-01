@@ -216,7 +216,7 @@ aside ul {
 /* ************** product Detail ****************** */
 
 .container-product-found{
-   padding-top: 6rem;
+   padding: 6rem 0;
    min-height: 100vh;
 }
 
@@ -335,6 +335,118 @@ aside ul {
 }
 
 
+/* ********************** Cart ************************* */
+
+.container-cart-product{
+   overflow: auto;
+   height: 80%;
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: 70px;
+}
+.product-in-cart{
+   position: relative;
+}
+
+.product-in-cart .bi-trash3-fill {
+   position: absolute;
+   right: 10px;
+   bottom: 40px;
+   color: red;
+   cursor: pointer;
+}
+
+.product-in-cart .bi-trash3-fill:hover {
+   transform: scale(1.2);
+}
+
+.quantity-cart{
+   min-width: 60px;
+   border: 1px solid var(--border-color-principal);
+   border-radius: 4px;
+   padding: 5px;
+   display: inline-block;
+   text-align: center;
+}
+
+.total-cart-product {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 30px;
+   margin: 5px;
+}
+
+.total-cart-product h5 {
+   margin: 0;
+}
+
+.container-total-price{
+   width: 100%; 
+   padding: 20px; 
+   position: absolute; 
+   bottom: 0; 
+   right: 0;
+   border-top: 2px solid  var(--border-color-principal); 
+}
+
+.container-total-price div {
+   display: flex;
+   justify-content: space-between;
+}
+
+.container-total-price div p {
+   color: black;
+}
+
+/* **************** Purchases ******************* */
+
+.container-purchases-found{
+   width: 70%;
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   list-style: none;
+}
+
+.purchases{
+   border: 2px solid var(--border-color-principal);
+   border-radius: 10px;
+}
+
+.date-purchases{
+   padding: 20px;
+   font-size: 20px;
+}
+
+.list-purchases{
+   display: flex;
+   flex-direction: column;
+   border-top: 2px solid var(--border-color-principal);
+   padding: 60px 0; 
+   list-style: none;
+   gap: 30px;
+}
+
+.list-purchases h3 {
+   font-size: 14px;
+}
+
+
+.purchase{
+   display: grid;
+   grid-template-columns: 2fr 1fr;
+   padding-left: 20%;
+   gap: 30px;
+}
+
+.container-price-purchase{
+   display: flex;
+   align-items: center;
+   gap: 40px;
+}
 
 /* *********** footer ************ */
 

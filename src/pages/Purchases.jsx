@@ -8,7 +8,7 @@ const Purchases = () => {
    const purchases = useSelector(state => state.purchases);
 
    useEffect(() => {
-      if(purchases.length == 0){
+      if (purchases.length == 0) {
          dispatch(getPurchasesThunk());
          console.log(purchases);
       };
@@ -17,19 +17,24 @@ const Purchases = () => {
    return (
       <div className='container-product-found' >
          <h2>purchases</h2>
-         <ul>
+         <ul className='container-purchases-found' >
             {
                purchases.map(purchase => (
-                  <li key={purchase.createdAt}>
-                     <h2>{purchase.createdAt}</h2>
-                     <ul>
-                        {purchase.cart.products.map(product => (
-                           <li key={product.id} >
-                              <h3>{product.title}</h3>
-                              <h4>{product.productsInCart.quantity}</h4>
-                           </li>
-                        ))}
-                     </ul>
+                  <li key={purchase.createdAt} className='purchases' >
+                     <h2 className='date-purchases' >{purchase.createdAt}</h2>
+                     <div>
+                        <ul className='list-purchases'>
+                           {purchase.cart.products.map(product => (
+                              <li key={product.id} className='purchase' >
+                                 <h3>{product.title}</h3>
+                                 <div className='container-price-purchase'>
+                                    <div className='quantity-cart'>{product.productsInCart.quantity}</div>
+                                    <h5>$ {Number(product.price) * product.productsInCart.quantity}</h5>
+                                 </div>
+                              </li>
+                           ))}
+                        </ul>
+                     </div>
                   </li>
                ))
             }
