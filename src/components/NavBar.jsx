@@ -22,14 +22,14 @@ const NavBar = () => {
                <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="me-auto">
                   </Nav>
-                  <Nav>
-                     <Nav.Link as={Link} to='/login' >
+                  <Nav >
+                     <Nav.Link as={Link} to='/login' eventKey={2}  >
                         <i className="bi bi-person"  ></i>
                      </Nav.Link>
-                     <Nav.Link as={Link} to='/purchases'>
+                     <Nav.Link as={Link} to='/purchases' eventKey={2}  >
                         <i className="bi bi-bag"></i>
                      </Nav.Link>
-                     <Nav.Link onClick={handleShow} >
+                     <Nav.Link onClick={handleShow} eventKey={2} >
                         <i className="bi bi-cart3"></i>
                      </Nav.Link>
                   </Nav>
@@ -37,7 +37,7 @@ const NavBar = () => {
             </Container>
          </Navbar>
 
-         <CartSideBars show={show} handleClose={handleClose} />
+         <CartSideBars show={show} handleClose={handleClose} setShow={setShow} />
 
       </div>
    );

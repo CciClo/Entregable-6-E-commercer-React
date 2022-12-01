@@ -43,20 +43,20 @@ const Login = () => {
 
 
    return (
-      <div className='container-product-found' style={{width: '35rem', margin:'auto'}}  >
-         <Form onSubmit={handleSubmit(submit)}  >
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+      <div style={{minHeight:'100vh' , margin:'auto', display:'flex', justifyContent:'center', alignItems:'center', }}  >
+         <Form onSubmit={handleSubmit(submit)} style={{width:'30%',minWidth:'15rem' , display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column' }}  >
+            <Form.Group className="mb-3" controlId="formBasicEmail" style={{width:'100%'}} >
                <Form.Label>Email address</Form.Label>
-               <Form.Control type="email" placeholder="Enter email" {...register('email')}/>
+               <Form.Control type="email" placeholder="Enter email" value='' {...register('email')}/>
 
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3" controlId="formBasicPassword" style={{width:'100%'}}>
                <Form.Label>Password</Form.Label>
-               <Form.Control type="password" placeholder="Password" {...register('password')} />
+               <Form.Control type="password" placeholder="Password" value='' {...register('password')} />
             </Form.Group>
 
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" style={{width:'100%'}} >
                Submit
             </Button>
          </Form>

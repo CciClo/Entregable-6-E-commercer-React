@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
 import { Button, Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { checkoutThunk, getCartSide } from '../store/slices/cartSideBar.slice';
 
-const CartSideBars = ({ show, handleClose }) => {
+const CartSideBars = ({ show, handleClose, setShow }) => {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -23,17 +23,31 @@ const CartSideBars = ({ show, handleClose }) => {
       <Offcanvas.Header closeButton>
         <Offcanvas.Title>Shopping cart</Offcanvas.Title>
       </Offcanvas.Header>
-      <Offcanvas.Body>
+      <Offcanvas.Body style={{position:'relative'}} >
         <ul>
           {
             cartSide.map(product => (
               <li key={product.id} >
-                <h4>{product.title}</h4>
+                <Link to={`/product/${product.id}`} onClick={() => setShow(false)} >
+                  <h4>{product.title}</h4>
+                </Link>
+                <h5>{product.productsInCart.quantity}</h5>
+                <h5>{Number(product.price)*product.productsInCart.quantity}</h5>
               </li>
             ))
           }
-          <Button onClick={() => ( cartSide.length !== 0 && dispatch(checkoutThunk()), cartSide.length !== 0 && navigate('/purchases') ) } >Checkout</Button>
         </ul>
+
+        <div style={{width:'100%', padding:'30px', position:'absolute', bottom:'0', right:'0'}} >
+          <span>Total</span>
+          <p>0</p>
+          <Button 
+            onClick={() => ( cartSide.length !== 0 && dispatch(checkoutThunk()), cartSide.length !== 0 && navigate('/purchases') ) } 
+            style={{width:'100%'}}
+          >
+              Checkout
+          </Button>
+        </div>
       </Offcanvas.Body>
     </Offcanvas>
   );
