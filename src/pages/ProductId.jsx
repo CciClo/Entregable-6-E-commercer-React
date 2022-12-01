@@ -35,7 +35,7 @@ const ProductId = () => {
    const submit = () => {
       const AddToCart = {
          id: productFound.id,
-         quantity:quantity
+         quantity:Number(quantity)
       }
 
       dispatch(addToCartThunk(AddToCart))
