@@ -353,9 +353,10 @@ aside ul {
    position: absolute;
    right: 10px;
    bottom: 40px;
-   color: red;
+   color: rgba(255, 0, 0, 0.637);
    cursor: pointer;
 }
+
 
 .product-in-cart .bi-trash3-fill:hover {
    transform: scale(1.2);

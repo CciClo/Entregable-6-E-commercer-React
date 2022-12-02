@@ -3,12 +3,13 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import CartSideBars from './CartSideBars';
 
 const NavBar = () => {
    const [show, setShow] = useState(false);
-
+   const login = localStorage.getItem('token');
+   const navigate = useNavigate()
    const handleClose = () => setShow(false);
    const handleShow = () => setShow(true);
 
@@ -29,7 +30,7 @@ const NavBar = () => {
                      <Nav.Link as={Link} to='/purchases' eventKey={2}  >
                         <i className="bi bi-bag"></i>
                      </Nav.Link>
-                     <Nav.Link onClick={handleShow} eventKey={2} >
+                     <Nav.Link onClick={() => login ? handleShow() : navigate('/login') } eventKey={2} >
                         <i className="bi bi-cart3"></i>
                      </Nav.Link>
                   </Nav>

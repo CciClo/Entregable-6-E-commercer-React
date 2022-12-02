@@ -9,6 +9,7 @@ import NavBar from './components/NavBar'
 import LoadingScreen from './components/LoadingScreen'
 import { useSelector } from 'react-redux'
 import ProtectedRoutes from './components/ProtectedRoutes'
+import SignUp from './store/slices/SignUp'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={ <Home />} />
         <Route path='/login' element={ <Login /> } />
+        <Route path='/signup' element={ <SignUp /> } />
         <Route element={<ProtectedRoutes />} >
           <Route path='/purchases' element={ <Purchases />} />
           <Route path='/product/:id' element={ <ProductId /> } />          

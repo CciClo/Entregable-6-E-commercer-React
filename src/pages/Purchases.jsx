@@ -4,7 +4,7 @@ import { getPurchasesThunk } from '../store/slices/purchases.slice';
 
 const Purchases = () => {
    const dispatch = useDispatch();
-
+   const login = localStorage.getItem('token');
    const purchases = useSelector(state => state.purchases);
 
    useEffect(() => {

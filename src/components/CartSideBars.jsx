@@ -17,6 +17,7 @@ const CartSideBars = ({ show, handleClose, setShow }) => {
     if(cartSide.length === 0){
       dispatch(getCartSide());
     }
+
     var totalPices = 0;
 
     for(let i of cartSide){
