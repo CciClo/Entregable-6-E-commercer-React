@@ -59,7 +59,7 @@ const Login = () => {
             login ?
                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection:'column'}}>
                   <i className="bi bi-person-circle" style={{fontSize:'100px', color:'#6a6a6a'}} ></i>
-                  <button className='button-logout' onClick={() => (localStorage.removeItem('token'), navigate('/'))} >Log Out</button>
+                  <button className='button-logout' onClick={() => (localStorage.removeItem('token'), window.location.reload())} >Log Out</button>
                </div>
                
                :
@@ -72,6 +72,7 @@ const Login = () => {
                         <p>tato.tandioy@gmail.com </p>
                         <span>Password</span>
                         <p>123456789</p>
+                        <br />
                         <span>Email address</span>
                         <p>jesusescalona@gmail.com</p>
                         <span>Password</span>
