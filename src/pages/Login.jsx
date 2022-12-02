@@ -14,6 +14,8 @@ const Login = () => {
    const { handleSubmit, register, reset } = useForm();
    const dispatch = useDispatch();
 
+   const [ isShowUsersDefault , setIsShowUsersDefault ] = useState(true);
+
    const navigate = useNavigate();
 
    const products = useSelector(state => state.products);
@@ -61,8 +63,22 @@ const Login = () => {
                </div>
                
                :
+               <Form onSubmit={handleSubmit(submit)} style={{ width: '30%', minWidth: '15rem', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}  > 
+                  <div className='isShowUsersDefault' style={{ display: isShowUsersDefault ? 'flex' : 'none' }} >
+                     <i className="bi bi-x-lg" onClick={() => setIsShowUsersDefault(false)} style={{ position:'absolute', top:'10px', right:'10px', backgroundColor:'red', borderRadius:'50%', height:'25px', width:'25px', color:'wheat', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer' }} ></i>
+                     <span>You can use these default users</span>
+                     <div>
+                        <span>Email address</span>
+                        <p>tato.tandioy@gmail.com </p>
+                        <span>Password</span>
+                        <p>123456789</p>
+                        <span>Email address</span>
+                        <p>jesusescalona@gmail.com</p>
+                        <span>Password</span>
+                        <p>jesusescalona1</p>
+                     </div>
 
-               <Form onSubmit={handleSubmit(submit)} style={{ width: '30%', minWidth: '15rem', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}  >
+                  </div>
                   <Form.Group className="mb-3" controlId="formBasicEmail" style={{ width: '100%' }} >
                      <Form.Label>Email address</Form.Label>
                      <Form.Control type="email" placeholder="Enter email" {...register('email')} />

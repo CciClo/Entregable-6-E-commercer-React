@@ -541,3 +541,50 @@ footer {
   box-shadow: none;
   transform: translateY(0);
 }
+
+
+/* ****************** Login ******************* */
+
+.isShowUsersDefault{
+   min-width: 50vw;
+   min-height: 30vh; 
+   position: absolute;
+   background-color:rgba(0, 0, 0, 0.9);
+   z-index: 100;
+   padding: 50px;
+   flex-direction: column;
+   gap: 30px;
+   animation: isshow 1.5s linear;
+   border-radius: 10px;
+}
+
+.isShowUsersDefault span {
+   color: aqua;
+   font-size: 20px;
+}
+
+.isShowUsersDefault div{
+   padding: 0 0 0 50px;
+}
+
+.isShowUsersDefault div span{
+   font-size: 15px;
+}
+
+.isShowUsersDefault div p {
+   margin: 0;
+   color: azure;
+   padding: 0 0 0 20px;
+}
+
+@keyframes isshow {
+   0%,50%,100%{
+      transform: scale(1);
+      opacity: 1;
+   }
+
+   25%,75%{
+      transform: scale(0.98);
+      opacity: 0.8;
+   }
+}
