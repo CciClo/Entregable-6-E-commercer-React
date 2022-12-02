@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { setIsLoading } from '../store/slices/isLoading.slice';
 import { getProductsThunk } from '../store/slices/products.slice';
 import ProductCard from '../components/ProductCard'
@@ -8,6 +8,9 @@ import { Button } from 'react-bootstrap';
 import { addToCartThunk } from '../store/slices/cartSideBar.slice';
 
 const ProductId = () => {
+
+   const login = localStorage.getItem('token');
+   const navigate = useNavigate();
 
    const [indexImage, setIndexImage] = useState(0);
    const [ quantity, setQuantity ] = useState(1);
@@ -86,7 +89,7 @@ const ProductId = () => {
                      </div>
                   </div>
                </div>
-               <Button style={{width:'100%'}} type='submit' onClick={submit} >
+               <Button style={{width:'100%'}} type='submit' onClick={() => login ? submit : navigate('/login')} >
                   Add to cart
                </Button>
             </section>
