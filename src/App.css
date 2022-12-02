@@ -556,6 +556,7 @@ footer {
    gap: 30px;
    animation: isshow 1.5s linear;
    border-radius: 10px;
+   transition: all 1s;
 }
 
 .isShowUsersDefault span {
