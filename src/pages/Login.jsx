@@ -64,7 +64,7 @@ const Login = () => {
                
                :
                <Form onSubmit={handleSubmit(submit)} style={{ width: '30%', minWidth: '15rem', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}  > 
-                  <div className='isShowUsersDefault' style={{ display: 'flex', scale: isShowUsersDefault ? '1' : '0.5', opacity: isShowUsersDefault ? '1' : '0'}} >
+                  <div className='isShowUsersDefault' style={{ display: 'flex', scale: isShowUsersDefault ? '1' : '0', opacity: isShowUsersDefault ? '1' : '0'}} >
                      <i className="bi bi-x-lg" onClick={() => setIsShowUsersDefault(false)} style={{ position:'absolute', top:'10px', right:'10px', backgroundColor:'red', borderRadius:'50%', height:'25px', width:'25px', color:'wheat', display:'flex', alignItems:'center', justifyContent:'center', cursor:'pointer' }} ></i>
                      <span>You can use these default users</span>
                      <div>
