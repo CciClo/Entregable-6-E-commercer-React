@@ -33,7 +33,7 @@ const Home = () => {
    return (
       <div className='home' >
 
-         <aside>
+         <aside style={{backgroundColor: "#e3e3d8"}}>
 
             <ul className='container-drop-down price closed' >
                <li className='aside-title' onClick={() => dropDown('price')} >

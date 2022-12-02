@@ -56,8 +56,8 @@ const Login = () => {
          {
             login ?
                <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection:'column'}}>
-                  <i className="bi bi-person-circle" style={{fontSize:'100px', color:'rgb(0, 132, 255)'}} ></i>
-                  <h5 style={{cursor:'pointer'}} onClick={() => (localStorage.removeItem('token'), navigate('/'))} >Log Out</h5>
+                  <i className="bi bi-person-circle" style={{fontSize:'100px', color:'#6a6a6a'}} ></i>
+                  <button className='button-logout' onClick={() => (localStorage.removeItem('token'), navigate('/'))} >Log Out</button>
                </div>
                
                :
@@ -74,7 +74,7 @@ const Login = () => {
                      <Form.Control type="password" placeholder="Password" {...register('password')} />
                   </Form.Group>
 
-                  <Button variant="primary" type="submit" style={{ width: '100%' }} >
+                  <Button className='button-logout' type="submit" style={{ width: '100%', borderRadius: "0", borderColor: "#6a6a6a" }} >
                      Login
                   </Button>
 

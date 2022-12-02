@@ -31,9 +31,9 @@ function App() {
         </Route>
       </Routes>
       <footer>
-        <h4>Developers</h4>
-        <h6>Oscar Tandioy & Jesus Escalona</h6>
-        <a href="https://github.com/CciClo/Entregable-6-E-commercer-React">
+        <h4 className='footer-text'>Developers</h4>
+        <h6 className='footer-text'>Oscar Tandioy & Jesus Escalona</h6>
+        <a className='footer-text' href="https://github.com/CciClo/Entregable-6-E-commercer-React">
           <i  className="bi bi-github"></i>
         </a>
       </footer>

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz@6..96&display=swap');
+
 :root{
    --border-color-principal: rgba(0, 0, 0, 0.288);
    --background-color-side:#343a40;
@@ -29,8 +31,22 @@ a{
    z-index: var(--z-index-side);
    top: 0;
    text-transform: lowercase;
+   
 }
-
+.navbar-name{
+   color: #bcb8b8;
+   font-family: 'Bodoni Moda', serif;
+   cursor: pointer;
+   font-size: 30px;
+   padding: 0;
+   margin: 0;
+}
+.navbar-name:hover{
+   color: #3e3d3d;
+}
+.navbar-name:focus{
+   color: #bcb8b8;
+}
 .navbar .bi {
    font-size: 20px;
    margin-left: 30px;
@@ -402,7 +418,11 @@ aside ul {
 }
 
 /* **************** Purchases ******************* */
-
+.purchases-title{
+   text-align: center;
+   margin-top: 20px;
+   font-family: 'Bodoni Moda', serif;
+}
 .container-purchases-found{
    width: 70%;
    margin: auto;
@@ -442,7 +462,12 @@ aside ul {
    padding-left: 20%;
    gap: 30px;
 }
-
+@media(max-width: 480px){
+   .purchase{
+      display: flex;
+      flex-direction: column;
+   }
+}
 .container-price-purchase{
    display: flex;
    align-items: center;
@@ -461,8 +486,58 @@ footer {
    padding: 30px;
    z-index: var(--z-index-footer);
    position: absolute;
+   
 }
-
+.footer-text{
+   color: #6a6a6a;
+}
 .hidden {
    display: none;
+}
+
+/* *********** login/logout ************ */
+
+.button-logout {
+  appearance: none;
+  background-color: transparent;
+  border: 3px solid ;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-logout:disabled {
+  pointer-events: none;
+}
+
+.button-logout:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  border: none;
+}
+
+.button-logout:active {
+  box-shadow: none;
+  transform: translateY(0);
 }

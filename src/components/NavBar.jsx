@@ -16,22 +16,22 @@ const NavBar = () => {
    return (
       <div className='navbar'>
 
-         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+         <Navbar style={{backgroundColor: "black"}} className="navbar" >
             <Container>
-               <Navbar.Brand as={Link} to='/' >e-commerce</Navbar.Brand>
+               <Navbar.Brand as={Link} to='/' className="navbar-name">Total Store</Navbar.Brand>
                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                <Navbar.Collapse id="responsive-navbar-nav">
                   <Nav className="me-auto">
                   </Nav>
                   <Nav >
                      <Nav.Link as={Link} to='/login' eventKey={2}  >
-                        <i className="bi bi-person"  ></i>
+                        <i style={{color: "#6a6a6a"}} className="bi bi-person"  ></i>
                      </Nav.Link>
                      <Nav.Link as={Link} to='/purchases' eventKey={2}  >
-                        <i className="bi bi-bag"></i>
+                        <i style={{color: "#6a6a6a"}} className="bi bi-bag"></i>
                      </Nav.Link>
                      <Nav.Link onClick={() => login ? handleShow() : navigate('/login') } eventKey={2} >
-                        <i className="bi bi-cart3"></i>
+                        <i style={{color: "#6a6a6a"}} className="bi bi-cart3"></i>
                      </Nav.Link>
                   </Nav>
                </Navbar.Collapse>

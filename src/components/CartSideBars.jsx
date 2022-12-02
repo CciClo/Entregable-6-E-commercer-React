@@ -58,8 +58,9 @@ const CartSideBars = ({ show, handleClose, setShow }) => {
             <p>$ {totalPrice}</p>
           </div>
           <Button 
+            className='button-logout' 
             onClick={() => ( cartSide.length !== 0 && dispatch(checkoutThunk()), cartSide.length !== 0 && navigate('/purchases') ) } 
-            style={{width:'100%'}}
+            style={{width:'100%', borderRadius: "0"}}
           >
               Checkout
           </Button>
