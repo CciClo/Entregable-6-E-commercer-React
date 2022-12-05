@@ -355,6 +355,8 @@ aside ul {
    height: 100%;
    position: absolute;
    transition: all 1s;
+   filter: brightness(1.1);
+   mix-blend-mode: multiply;
 }
 
 .image-detail-hidden{
