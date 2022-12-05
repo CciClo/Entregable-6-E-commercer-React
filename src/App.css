@@ -190,6 +190,8 @@ aside ul {
    height: 80%;
    object-fit: contain;
    transition: opacity 1s ;
+   filter: brightness(1.1);
+   mix-blend-mode: multiply;
 }
 .image-product-2 {
    position: absolute;
