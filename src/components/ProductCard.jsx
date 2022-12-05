@@ -3,21 +3,29 @@ import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
 
-   const [ indexSliderImage, setIndexSliderImage ] = useState(1);
+   // const [ indexSliderImage, setIndexSliderImage ] = useState(1);
 
    return (
       <li className='productCard' >
             <div className='container-image-product' >
                <img
                   
-                  onMouseEnter={()=>{
-                     setIndexSliderImage(0);
-                  }}
-                  onMouseLeave={()=>{
-                     setIndexSliderImage(1);
-                  }}
+                  // onMouseEnter={()=>{
+                  //    setIndexSliderImage(0);
+                  // }}
+                  // onMouseLeave={()=>{
+                  //    setIndexSliderImage(1);
+                  // }}
 
-                  src={product.productImgs[indexSliderImage]} 
+                  className='image-product-1'
+
+                  src={product.productImgs[0]} 
+                  alt="" 
+               />
+
+               <img
+                  className='image-product-2'
+                  src={product.productImgs[1]} 
                   alt="" 
                />
 
