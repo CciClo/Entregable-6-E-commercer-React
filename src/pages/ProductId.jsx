@@ -89,7 +89,7 @@ const ProductId = () => {
                      </div>
                   </div>
                </div>
-               <Button style={{width:'100%'}} type='submit' onClick={() => login ? submit : navigate('/login')} >
+               <Button style={{width:'100%'}} type='submit' onClick={() => login ? submit() : navigate('/login')} >
                   Add to cart
                </Button>
             </section>
