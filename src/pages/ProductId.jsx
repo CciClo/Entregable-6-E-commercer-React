@@ -21,7 +21,7 @@ const ProductId = () => {
    const products = useSelector(state => state.products);
    const productFound = products.find(Product => Product.id == Number(id));
 
-   const relateProduct = products.filter(Product => Product.category.id === productFound.category.id);
+   const relateProduct = products.filter(Product => Product.category.id === productFound.category.id && Product.title !== productFound.title);
 
    useEffect(() => {
 
